@@ -1,5 +1,9 @@
-const CACHE = "dreimann-v3";
-const ASSETS = ["./", "./index.html", "./manifest.json", "./icon.svg"];
+const CACHE = "dreimann-v4";
+const ASSETS = [
+  "./", "./index.html", "./manifest.json", "./icon.svg",
+  "./icon-192.png", "./icon-512.png", "./icon-512-maskable.png",
+  "./apple-touch-icon.png", "./favicon-32.png"
+];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
